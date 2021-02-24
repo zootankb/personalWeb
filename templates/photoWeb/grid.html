@@ -1,0 +1,248 @@
+{% extends 'photoWeb/base.html' %}
+
+{% load static %}
+
+{% block main_data %}
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+                <h1>欢迎来到 <em>小橙子与大荣荣的网站</em></h1>
+                <p>这是我们的生活日志</p>
+                <p>记录生活中的点点滴滴</p>
+                <div class="scroll-icon">
+                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img
+                            src="{% static 'photoWeb/img0/scroll-icon.png' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <video autoplay="" loop="" muted>
+            <source src="{% static 'photoWeb/highway-loop.mp4' %}" type="video/mp4"/>
+        </video>
+    </div>
+
+
+    <div class="grid-portfolio" id="portfolio">
+        <div class="container">
+            <div class="row-grid">
+                <!--
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_4.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>Biodiesel <em>squid</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_4.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_2.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>raclette <em>taxidermy</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_2.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_3.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>humblebrag <em>brunch</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_3.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_1.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>Succulents <em>chambray</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_1.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_5.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>freegan <em>aesthetic</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_5.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_6.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>taiyaki <em>vegan</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_6.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_7.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>Thundercats <em>santo</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_7.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_8.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>wayfarers <em>yuccie</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_8.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <div class="thumb">
+                            <a href="{% static 'photoWeb/img/big_portfolio_item_9.png' %}" data-lightbox="image-1"><div class="hover-effect">
+                                <div class="hover-content">
+                                    <h1>disrupt <em>street</em></h1>
+                                    <p>Awesome Subtittle Goes Here</p>
+                                </div>
+                            </div></a>
+                            <div class="image">
+                                <img src="{% static 'photoWeb/img/portfolio_item_9.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+                {% if photos %}
+                    {% for info in photos %}
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item">
+                                <div class="thumb">
+                                    <a href="{{ MEDIA_URL }}{{ info.imgLevel1 }}" data-lightbox="image-1">
+                                        <div class="hover-effect">
+                                            <div class="hover-content">
+                                                <h1>{{ info.title }} <em>{{ info.category }}</em></h1>
+                                                <p>{{ info.description }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="image">
+                                        <img src="{{ MEDIA_URL }}{{ info.imgLevel1 }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+            <div class="col-md-12">
+                <div class="load-more-button" onclick="loadmore()">
+                    <a href="#">加载更多</a>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        var totalPage = 2;//总页数
+        var pageNo = 1;//当前页数
+        var pageSize = 9; // 页面大小
+        function loadmore() {
+            if (pageNo < totalPage) {
+                pageNo++;
+                getPageInfo(pageNo, pageSize);
+            } else {
+                alert("已经没有可撸的了");
+            }
+        }
+
+        function getPageInfo(num, size) {
+            $.ajax({
+                url: "{% url 'photoWeb:get_photo_page' %}",
+                type: "GET",
+                data: {
+                    pageNumber: num,
+                    pageSize: size
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data != null) {
+                        var jd = data;
+                        totalPage = jd.totalPage;
+                        var result = '';
+                        for (var i = 0; i < jd.content.length; ++i) {
+                            result += '<div class="col-md-4 col-sm-6">\n' +
+                                '                            <div class="portfolio-item">\n' +
+                                '                                <div class="thumb">\n' +
+                                '                                    <a href="' + {{ MEDIA_URL }} +jd.content[i].imgLevel1 + '" data-lightbox="image-1"><div class="hover-effect">\n' +
+                                '                                        <div class="hover-content">\n' +
+                                '                                            <h1>' + jd.content[i].title + ' <em>' + jd.content[i].category + '</em></h1>\n' +
+                                '                                            <p>' + jd.content[i].description + '</p>\n' +
+                                '                                        </div>\n' +
+                                '                                    </div></a>\n' +
+                                '                                    <div class="image">\n' +
+                                '                                        <img src="' + {{ MEDIA_URL }} + jd.content[i].imgLevel1 + '">\n' +
+                                '                                    </div>\n' +
+                                '                                </div>\n' +
+                                '                            </div>\n' +
+                                '                        </div>';
+                        }
+                        $('.row-grid').append(result);
+                    }
+                },
+                error: function (request) {
+                    alert(request.code.toString());
+                }
+            })
+        }
+    </script>
+{% endblock %}

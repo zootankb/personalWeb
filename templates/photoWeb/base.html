@@ -1,0 +1,160 @@
+<html lang="">
+    <head>
+        {% load static %}
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>ZooTankB</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{% static 'photoWeb/favicon.ico' %}">
+
+        <link rel="stylesheet" href="{% static 'photoWeb/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'photoWeb/css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'photoWeb/css/fontAwesome.css' %}">
+        <link rel="stylesheet" href="{% static 'photoWeb/css/light-box.css' %}">
+        <link rel="stylesheet" href="{% static 'photoWeb/css/templatemo-style.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="{% static 'photoWeb/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="{% url 'photoWeb:index' %}">Yang<em>Rong</em></a>
+        </div>
+        <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+    {% block main_data %}
+        <h1>This is the base.html</h1>
+    {% endblock %}
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p>Copyright &copy; Template mo 2018 YangRong
+    | More Info <a href="#" target="_blank" title="荣荣和小橙子">YangRong</a> - Collect from <a href="#" title="荣荣和小橙子" target="_blank">YangRong</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+      <!-- Modal button -->
+    <div class="popup-icon">
+      <button id="modBtn" class="modal-btn"><img src="{% static 'photoWeb/img/contact-icon.png' %}" alt=""></button>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="header-title">Say hello to <em>Highway</em></h3>
+          <div class="close-btn"><img src="{% static 'photoWeb/img/close_contact.png' %}" alt=""></div>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="col-md-6 col-md-offset-3">
+            <form id="contact" action="" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12">
+                      <fieldset>
+                          <label for="name"></label><input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                          <label for="email"></label><input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                          <label for="message"></label><textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="btn" onclick="postMessage()">Send Message Now</button>
+                      </fieldset>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="overlay-menu">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+              <ul>
+                  <li>
+                      <a href="{% url 'photoWeb:index' %}">Home - Full-width</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'photoWeb:masonry' %}">Home - Masonry</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'photoWeb:grid' %}">Home - Small-width</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'photoWeb:about' %}">About Us</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'photoWeb:blog' %}">Blog Entries</a>
+                  </li>
+                  <li>
+                      <a href="{% url 'photoWeb:single_post' %}">Single Post</a>
+                  </li>
+                  <li>
+                      <a href="#">Login</a>
+                  </li>
+              </ul>
+              <p>多种方式撒狗粮</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="photoWeb/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="{% static 'photoWeb/js/vendor/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'photoWeb/js/plugins.js' %}"></script>
+    <script src="{% static 'photoWeb/js/main.js' %}"></script>
+    <script type="text/javascript">
+        function postMessage() {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "{% url 'photoWeb:get_message_from_user' %}",
+                data: $('#contact').serialize(),
+                success: function (result) {
+                    console.log(result);
+                    if(result.result === true){
+                        alert('Success');
+                    }else{
+                        alert('False');
+                    }
+                },
+                error:function () {
+                    alert('Exception');
+                }
+            })
+        }
+    </script>
+</body>
+</html>

@@ -106,7 +106,7 @@ def about(request):
     return render(request, 'photoWeb/about.html')
 
 
-def work_art(request):
+def work(request):
     return render(request, 'photoWeb/work_art.html')
 
 

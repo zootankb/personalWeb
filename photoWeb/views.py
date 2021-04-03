@@ -106,10 +106,6 @@ def about(request):
     return render(request, 'photoWeb/about.html')
 
 
-def work_art(request):
-    return render(request, 'photoWeb/work_art.html')
-
-
 def get_message_from_user(request):
     """
     POST方式获取用户上传的消息

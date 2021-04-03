@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a057b7a-209c-4bc6-a07e-a47a420d427b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/photoWeb/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photoWeb/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/work_art.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/static/photoWeb/work_art.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/photoWeb/work_art.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photoWeb/work_art.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +44,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Git\personalWeb\static\photoWeb" />
       <recent name="F:\Git\personalWeb\static" />
       <recent name="D:\Self\Projects\Python\personalWeb\static\photoWeb\img" />
       <recent name="F:\Python\personalWeb\static\photoWeb" />
@@ -110,7 +111,16 @@
       <workItem from="1616907113243" duration="33000" />
       <workItem from="1616907263349" duration="99000" />
       <workItem from="1617454798742" duration="1007000" />
+      <workItem from="1617456227468" duration="433000" />
     </task>
+    <task id="LOCAL-00001" summary="在work里面添加None">
+      <created>1617456653431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617456653431</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,19 +139,27 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="在work里面添加None" />
+    <option name="LAST_COMMIT_MESSAGE" value="在work里面添加None" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617454870349">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617454870349" />
+    <state x="560" y="118" key="CommitChangelistDialog2" timestamp="1617456652620">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="560" y="118" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1617456652620" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1616334111664">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1616334111664" />
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1617454799786">
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1617456229639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617454799786" />
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617456229639" />
     <state x="636" y="124" width="647" height="801" key="find.popup" timestamp="1616685322578">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

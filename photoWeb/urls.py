@@ -14,7 +14,7 @@ urlpatterns = [
     path('blog', views.blog, name='blog'),
     path('single_post', views.single_post, name='single_post'),
     path('about', views.about, name='about'),
-    path('work', views.work, name='work'),
+    path('work_art', views.work_art, name='work_art'),
     path('get_message_from_user', views.get_message_from_user, name='get_message_from_user'),
 
     path('get_photo_page', views.get_photo_page, name='get_photo_page'),

@@ -4,6 +4,7 @@
     <list default="true" id="7a057b7a-209c-4bc6-a07e-a47a420d427b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/photoWeb/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photoWeb/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/photoWeb/work_art.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/photoWeb/work_art.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +109,7 @@
       <workItem from="1616906836316" duration="201000" />
       <workItem from="1616907113243" duration="33000" />
       <workItem from="1616907263349" duration="99000" />
+      <workItem from="1617454798742" duration="1007000" />
     </task>
     <servers />
   </component>
@@ -128,18 +130,18 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616333419943">
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617454870349">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1616333419943" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617454870349" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1616334111664">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1616334111664" />
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1616907264924">
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1617454799786">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1616907264924" />
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617454799786" />
     <state x="636" y="124" width="647" height="801" key="find.popup" timestamp="1616685322578">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

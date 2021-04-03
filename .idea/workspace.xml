@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a057b7a-209c-4bc6-a07e-a47a420d427b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photoWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/photoWeb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photoWeb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photoWeb/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +113,7 @@
       <workItem from="1617454798742" duration="1007000" />
       <workItem from="1617456227468" duration="433000" />
       <workItem from="1617456915231" duration="836000" />
+      <workItem from="1617458077561" duration="919000" />
     </task>
     <task id="LOCAL-00001" summary="在work里面添加None">
       <created>1617456653431</created>
@@ -163,10 +166,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1616334111664" />
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1617456916110">
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1617458077486">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617456916110" />
+    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1617458077486" />
     <state x="636" y="124" width="647" height="801" key="find.popup" timestamp="1616685322578">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

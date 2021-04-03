@@ -107,7 +107,7 @@ def about(request):
 
 
 def work_art(request):
-    return render(request, 'photoWeb/work_art.html', None)
+    return render(request, 'photoWeb/work_art.html')
 
 
 def get_message_from_user(request):

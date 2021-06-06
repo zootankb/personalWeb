@@ -178,7 +178,7 @@
                             {% if data %}
                                 {% for cameraman in data.recent_cameraman %}
                                     <li><a href="{% url "photoWeb:single_post" %}?id={{ cameraman.id }}"/>
-                                        <img src="{{ MEDIA_URL }}{{ cameraman.imgLevel3 }}" alt="Recent Post 3">
+                                        <img src="{{ MEDIA_URL }}{{ cameraman.imgLevel2 }}" alt="Recent Post 3">
                                         <div class="text">
                                             <h6>{{ cameraman.cameraman }}</h6>
                                             <span>{{ cameraman.created_at }}</span>

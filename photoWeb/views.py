@@ -2,12 +2,14 @@ import json
 
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.conf import settings
 from django.forms.models import model_to_dict
 from django.views.static import serve
 
+from local_struct import CJSONEncoder
 from local_struct.page_data import PageData
+from local_struct.result_client import ResultClient
 from personalWeb.settings import MEDIA_ROOT, MEDIA_DIR, MEDIA_URL
 from .models import *
 import math
@@ -128,6 +130,69 @@ def get_message_from_user(request):
     return HttpResponse(json.dumps({'result': res}))
 
 
+@csrf_exempt
+def post_photo_blog_from_user(request):
+    """
+    上传blog日志
+    :param request:
+    :return:
+    """
+    res = 'Fail'
+    if request.method == 'POST':
+        category = Category.objects.get(id = int(request.POST.get('category')))
+        cameraman = Cameraman.objects.get(id = int(request.POST.get('cameraman')))
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        content = request.POST.get('content')
+        imgLevel1 = request.FILES.get('imgLevel1')
+        imgLevel2 = request.FILES.get('imgLevel2')
+        imgLevel3 = request.FILES.get('imgLevel3')
+        b = Blog()
+        b.category = category
+        b.cameraman = cameraman
+        b.title = title
+        b.description = description
+        b.content = content
+        b.imgLevel1 = imgLevel1
+        b.imgLevel2 = imgLevel2
+        b.imgLevel3 = imgLevel3
+        b.save()
+        res = 'Succ'
+    return HttpResponse(res)
+
+
+def get_all_categories(request):
+    """
+    获取所有的风格信息
+    :param request:
+    :return:
+    """
+    rc = ResultClient()
+    if request.method == 'GET':
+        categories = Category.objects.values()
+        rc.result = list(categories)
+    else:
+        rc.code = 50
+        rc.msg = '请求方式错误'
+    return JsonResponse(json.dumps(rc.__dict__, cls=CJSONEncoder.CJSONEncoder),safe=False)
+
+
+def get_all_cameras(request):
+    """
+    获取所有的摄影师信息
+    :param request:
+    :return:
+    """
+    rc = ResultClient()
+    if request.method == 'GET':
+        cameras = Cameraman.objects.values()
+        rc.result = list(cameras)
+    else:
+        rc.code = 50
+        rc.msg = '请求方式错误'
+    return HttpResponse(json.dumps(rc.__dict__, cls=CJSONEncoder.CJSONEncoder),safe=False)
+
+
 '''
 逻辑操作
 '''
@@ -156,7 +221,7 @@ def get_photo_by_page(page_num=1, page_size=9):
 
 
 def get_blog_by_page(page_num=1, page_size=3):
-    photos = Blog.objects.values_list('id', 'imgLevel1', 'imgLevel3', 'cameraman', 'category', 'title', 'content', 'created_at')
+    photos = Blog.objects.values_list('id', 'imgLevel1', 'imgLevel2','imgLevel3', 'cameraman', 'category', 'title', 'content', 'created_at')
     p = list(photos)
     if photos:
         start_num = (page_num - 1) * page_size
@@ -169,7 +234,7 @@ def get_blog_by_page(page_num=1, page_size=3):
         else:
             return None
         p = p[start_num:end_num]
-        keys = ['id', 'imgLevel1', 'imgLevel3', 'cameraman', 'category', 'title', 'content', 'created_at']
+        keys = ['id', 'imgLevel1', 'imgLevel2','imgLevel3', 'cameraman', 'category', 'title', 'content', 'created_at']
         dic = [dict(zip(keys, item)) for item in p]
         for item in dic:
             item['category'] = Category.objects.get(id=item['category']).name
@@ -227,3 +292,4 @@ def get_recent_7_month_blog():
 
     print(date_dic)
     return None
+

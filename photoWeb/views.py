@@ -174,7 +174,8 @@ def get_all_categories(request):
     else:
         rc.code = 50
         rc.msg = '请求方式错误'
-    return JsonResponse(json.dumps(rc.__dict__, cls=CJSONEncoder.CJSONEncoder),safe=False)
+    return HttpResponse(json.dumps(rc.__dict__, ensure_ascii=False, cls=CJSONEncoder.CJSONEncoder),
+                        content_type="application/json")
 
 
 def get_all_cameras(request):
@@ -190,7 +191,8 @@ def get_all_cameras(request):
     else:
         rc.code = 50
         rc.msg = '请求方式错误'
-    return HttpResponse(json.dumps(rc.__dict__, cls=CJSONEncoder.CJSONEncoder),safe=False)
+    return HttpResponse(json.dumps(rc.__dict__, ensure_ascii=False, cls=CJSONEncoder.CJSONEncoder),
+                        content_type="application/json")
 
 
 '''

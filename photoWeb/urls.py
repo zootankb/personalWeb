@@ -16,11 +16,10 @@ urlpatterns = [
     path('about', views.about, name='about'),
 
     path('get_message_from_user', views.get_message_from_user, name='get_message_from_user'),
+    path('get_photo_page', views.get_photo_page, name='get_photo_page'),
+    path('get_blog_page', views.get_blog_page, name='get_blog_page'),
 
     path('post_photo_blog_from_user', views.post_photo_blog_from_user, name='post_photo_blog_from_user'),
     path('get_all_categories', views.get_all_categories, name='get_all_categories'),
     path('get_all_cameras', views.get_all_cameras, name='get_all_cameras'),
-
-    path('get_photo_page', views.get_photo_page, name='get_photo_page'),
-    path('get_blog_page', views.get_blog_page, name='get_blog_page'),
 ]
